@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f8f8fa, #eae9ef)
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    width: 100%;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+    z-index: 10;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.navbar {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b5ace6;
+    color: rgb(255, 255, 255);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.navbar:hover {
+    background-color: #b5ace6;
+}
+
+.navbar button {
+    list-style-type: none;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    background-color: #30BEFE;
+    font-size: 87%;
+    border-radius: 8px;
+}
+
+.navbar button:hover {
+    background-color: #2697d1;
+}
+
+.array-container {
+    width: calc(100% - 200px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.array-bars-container {
+    width: 85%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.array-bar {
+    width: 0.5%;
+    margin: 0 0.1%;
+    background-color: grey;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.array-bar:hover {
+    transform: scaleY(1.1);
+}
+
+.timeBox {
+    font-size: 2em;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: #b5ace6;
+    padding: 5px 0;
+    z-index: 10;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+}
